@@ -61,6 +61,11 @@ function generatePassword() {
     else{
 
     }
+    if (isUppercase===true){
+      var positionsString=Math.floor(Math.random()*26)
+      console.log(positionsString)
+      finalPwd=finalPwd + uppercase[positionsString]
+    }
   }
   else {
     alert("Invalid entry")
