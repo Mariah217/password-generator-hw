@@ -16,18 +16,6 @@ var special = "!@#$%&*"
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-//Step 1: prompt user for password length
-
-// If user presses Cancel, go to next prompt
-
-
-//Step 1: prompt user for lowercase
-
-
-// Step 1: prompt user for uppercase
-
-
-
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -52,26 +40,46 @@ function generatePassword() {
     var isSpecial = confirm("Would you like to include special characters?")
     console.log(isSpecial)
 
-//randomly picks the position of the lowercase
-    if (isLowercase===true){
-      var positionsString=Math.floor(Math.random()*26) //*26 changes it from decimal to whole # up to 26 for alphabet
+    //randomly selects the position of the lowercase letter
+    if (isLowercase === true) {
+      var positionsString = Math.floor(Math.random() * 26) //*26 changes it from decimal to whole # up to 26 for alphabet
       console.log(positionsString)
-      finalPwd=finalPwd + lowerCase[positionsString] //assigns final password to get returned below
+      finalPwd = finalPwd + lowerCase[positionsString] //assigns final password to get returned below
     }
-    else{
+    else {
 
     }
-    if (isUppercase===true){
-      var positionsString=Math.floor(Math.random()*26)
+    //randomly selects the position of the uppercase letter
+    if (isUppercase === true) {
+      var positionsString = Math.floor(Math.random() * 26)
       console.log(positionsString)
-      finalPwd=finalPwd + uppercase[positionsString]
+      finalPwd = finalPwd + uppercase[positionsString]
+    }
+    else {
+
+    }
+    //randomly selects the position of the number
+    if (isNumber === true) {
+      var positionsString = Math.floor(Math.random() * 120) //*120 changes it from a decimal to whole # up to 120 (range 8-128=120 diff numbers)
+      console.log(positionsString)
+      finalPwd = finalPwd + number[positionsString]
+    }
+    else {
+
+    }
+    //randomly selects the position of the special character
+    if (isSpecial === true) {
+      var positionsString = Math.floor(Math.random() * 7) //*7 because there are 7 different special characters
+      console.log(positionsString)
+      finalPwd = finalPwd + special[positionsString]
     }
   }
   else {
     alert("Invalid entry")
   }
-
-  return finalPwd //this will return final value next to the return
+  //displays the final password
+  return finalPwd
 }
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
