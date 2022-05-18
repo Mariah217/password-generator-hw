@@ -7,9 +7,9 @@
 4. Display password*/
 
 //Variables for prompts with strings
-var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+var alpha = "abcdefghijklmnopqrstuvwxyz";
 //converts lowercase to uppercase
-var uppercase = lowerCase.toUpperCase();
+var uppercase = alpha.toUpperCase();
 var number = "0123456789";
 var special = "!@#$%&*";
 var charTypes = [];
@@ -54,23 +54,33 @@ function generatePassword() {
       var randomText = Math.floor(Math.random() * charTypes.length);
     // loop for lowercase
     if (randomText==="lowercase"){
-      var randomLower= Math.floor(Math.random() * 26);
+      var randomLower= Math.floor(Math.random() * 25);
+      finalPwd = finalPwd + alpha [randomLower];
     }
-    // loop for uppercase
+
     if (randomText==="uppercase"){
-      var randomUpper =
+      var randomUpper= Math.floor(Math.random() * 25);
+      finalPwd = finalPwd + alpha [randomUpper];
     }
-      
+    if (randomText==="number"){
+      var randomNumber= Math.floor(Math.random() * 9);
+      finalPwd = finalPwd + alpha [randomNumber];
+    }
+    if (randomText==="special"){
+      var randomSpecial= Math.floor(Math.random() * 7);
+      finalPwd = finalPwd + alpha [randomSpecial];
+    }
+
       //randomly selects the position of the lowercase letter
       if (isLowercase === true) {
-        var positionsString = Math.floor(Math.random() * 26) //*26 changes it from decimal to whole # up to 26 for alphabet
+        var positionsString = Math.floor(Math.random() * 25) //*26 changes it from decimal to whole # up to 26 for alphabet
         console.log(positionsString)
-        finalPwd = finalPwd + lowerCase[positionsString] //assigns final password to get returned below
+        finalPwd = finalPwd + alpha[positionsString] //assigns final password to get returned below
       }
 
       //randomly selects the position of the uppercase letter
       if (isUppercase === true) {
-        var positionsString = Math.floor(Math.random() * 26)
+        var positionsString = Math.floor(Math.random() * 25)
         console.log(positionsString)
         finalPwd = finalPwd + uppercase[positionsString]
       }
