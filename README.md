@@ -7,7 +7,9 @@ While creating the JavaScript for this website, I learned about for loops, varia
 
 ## Usage
 
+<a href=""> Click for Live Link </a>
 ![password generator screenshot](./Assets/Images/Generate-password.PNG)
+
 
 ## Credits
 
