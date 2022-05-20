@@ -7,7 +7,7 @@ While creating the JavaScript for this website, I learned about for loops, varia
 
 ## Usage
 
-![password generator screenshot] (/Assets/images/Generate-password.pgn)
+![password generator screenshot](./Assets/Images/Generate-password.PNG)
 
 ## Credits
 
