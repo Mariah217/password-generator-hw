@@ -73,34 +73,6 @@ function generatePassword() {
         var randomSpecial = Math.floor(Math.random() * 7);
         finalPwd = finalPwd + special[randomSpecial];
       }
-
-      //randomly selects the position of the lowercase letter
-      // if (isLowercase === true) {
-      //   var positionsString = Math.floor(Math.random() * 26) //*26 changes it from decimal to whole # up to 26 for alphabet
-      //   console.log(positionsString)
-      //   finalPwd = finalPwd + alpha[positionsString] //assigns final password to get returned below
-      // }
-
-      // //randomly selects the position of the uppercase letter
-      // if (isUppercase === true) {
-      //   var positionsString = Math.floor(Math.random() * 26)
-      //   console.log(positionsString)
-      //   finalPwd = finalPwd + uppercase[positionsString]
-      // }
-
-      // //randomly selects the position of the number
-      // if (isNumber === true) {
-      //   var positionsString = Math.floor(Math.random() * 10) //*10 changes it from a decimal to whole # up to 120 (range 8-128=120 diff numbers)
-      //   console.log(positionsString)
-      //   finalPwd = finalPwd + number[positionsString]
-      // }
-
-      // //randomly selects the position of the special character
-      // if (isSpecial === true) {
-      //   var positionsString = Math.floor(Math.random() * 7) //*7 because there are 7 different special characters
-      //   console.log(positionsString)
-      //   finalPwd = finalPwd + special[positionsString]
-      // }
     }
   }
   else {
